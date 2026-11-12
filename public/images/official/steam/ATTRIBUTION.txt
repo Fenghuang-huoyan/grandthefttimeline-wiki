@@ -1,0 +1,63 @@
+Official Steam store assets for Grand Theft Timeline (AppID 4928450).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 12 Nov 2026.
+Fan site: not affiliated with REAL PLAYERS, Rockstar Games, Valve, or Steam.
+Store page: https://store.steampowered.com/app/4928450/Grand_Theft_Timeline/
+Asset paths below use the hashed filenames returned by Steam IStoreBrowseService GetItems
+and the English appdetails screenshot list. Cache key t=1794006027.
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/0d5e60a5b128c336dd169c546954359af380842d/library_hero.jpg?t=1794006027
+
+library-hero-2x.jpg
+  Steam library hero, 3840x1240
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/0d5e60a5b128c336dd169c546954359af380842d/library_hero_2x.jpg?t=1794006027
+
+library-capsule.jpg
+  Steam library capsule, 300x450
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/5ef565a0a68c7a9b613f6a18816ac07f308a896c/library_capsule.jpg?t=1794006027
+
+hero-capsule.jpg
+  Steam hero capsule, 374x448
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/fd465a63b93c5cd1cb32063266ebcba1fef40dc3/hero_capsule.jpg?t=1794006027
+
+header.jpg
+  Store header from appdetails header_image, 460x215
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/9856eb60fb023ea4c10ed38270e8fbd0159522ed/header.jpg?t=1794006027
+
+capsule-616x353.jpg
+  Store capsule, 616x353
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/d3d9b274e0ef676d5df5488812148932678832c2/capsule_616x353.jpg?t=1794006027
+
+capsule-231x87.jpg
+  Small store capsule, 231x87
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/2c4c1e67ef1544f3027b86c04837ed55ba5c0a29/capsule_231x87.jpg?t=1794006027
+
+Screenshots are the 600x338 store thumbnails from appdetails on 12 Nov 2026 (t=1794006027).
+Full-size 1920x1080 files exist at the same paths with .1920x1080.jpg. This site stores the thumbnails.
+HUD text described on the site is text visible in these files, not a world index.
+
+ss-00.jpg
+  Palm beach with blocky figures. HUD year reads 651 BC.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/c871084e7e243c97ee8f0213c33efcf3c1276734/ss_c871084e7e243c97ee8f0213c33efcf3c1276734.600x338.jpg?t=1794006027
+
+ss-01.jpg
+  Candle-lit stone hall with seated statues. HUD reads 1323 BC and Egypt.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/484c14f26f9c394132c4afe6f975aa949f87266e/ss_484c14f26f9c394132c4afe6f975aa949f87266e.600x338.jpg?t=1794006027
+
+ss-02.jpg
+  Pastel courtyard. HUD reads Game 1, 2021 and Squid Game.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/a121f0c9e3374e07f56d4758393b9d6180d41c6d/ss_a121f0c9e3374e07f56d4758393b9d6180d41c6d.600x338.jpg?t=1794006027
+
+ss-05.jpg
+  Dark booth lined with colored panels. HUD reads 1266 and The Renaissance.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/26bbd22ad658d03e6dd4b4c1f613600daeff1424/ss_26bbd22ad658d03e6dd4b4c1f613600daeff1424.600x338.jpg?t=1794006027
+
+ss-06.jpg
+  Machine interior with gauges. HUD includes 2088, The Future, and In Transit.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/9b383b5c91823e6337025256b3db44a3076669cb/ss_9b383b5c91823e6337025256b3db44a3076669cb.600x338.jpg?t=1794006027
+
+ss-07.jpg
+  Blue-and-white checkered room. HUD reads Ingolstadt, 1818 and Frankenstein's Lab.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4928450/fd5f4e4d26ef3dda93975f06885513d60ad529c3/ss_fd5f4e4d26ef3dda93975f06885513d60ad529c3.600x338.jpg?t=1794006027

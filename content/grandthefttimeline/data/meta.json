@@ -1,0 +1,11 @@
+{
+  "release": "19 Nov 2026",
+  "releaseNote": "Steam release_date on 12 Nov 2026, with coming_soon true. The game is not out.",
+  "platform": "Windows",
+  "platformNote": "Platforms that day: Windows true, Mac false, Linux false. Minimum OS is Windows 10+.",
+  "players": "1–4+",
+  "playersNote": "The short description’s player line. Categories also list Single-player, Multi-player, Co-op, and Online Co-op.",
+  "genre": "Early Access",
+  "genreNote": "Early Access is one genre on the store list. The same payload still marks the game coming soon.",
+  "platforms": "Windows"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "q": "When does Grand Theft Timeline release?",
+    "a": "The English Steam appdetails payload on 12 November 2026 lists the release date as 19 Nov, 2026, with coming_soon set to true. The store page was still a coming-soon listing. This guide does not treat the game as already released.",
+    "featured": true
+  },
+  {
+    "q": "Who develops and publishes Grand Theft Timeline?",
+    "a": "The Steam appdetails payload lists developer REAL PLAYERS and publisher REAL PLAYERS. The store page prints the site https://www.tbjbu2.com/ and the support email grandemprise@gmail.com. This wiki is not affiliated with REAL PLAYERS, Rockstar Games, or Valve, and it does not read that mailbox.",
+    "featured": true
+  },
+  {
+    "q": "What kind of game is Grand Theft Timeline?",
+    "a": "Steam’s short description calls it a 1–4+ player time-travel heist with physics, guns, bosses, an arena, a home base, skins, and stocks. You capture people across worlds of history and fiction, bring them home, and collect paradox in the garage. Genres listed are Action, Adventure, Casual, Indie, RPG, Simulation, and Early Access.",
+    "featured": true
+  },
+  {
+    "q": "Are there Grand Theft Timeline codes?",
+    "a": "The English store page and appdetails payload checked on 12 November 2026 do not describe a redeem-code system. This site has no codes page and does not invent codes.",
+    "featured": true
+  },
+  {
+    "q": "Is Grand Theft Timeline co-op?",
+    "a": "Yes, according to the store. Categories include Single-player, Multi-player, Co-op, and Online Co-op. The short description says 1–4+ players, and the feature list says online co-op, and that solo is fun too. The minimum spec asks for a broadband connection. This site has not played a session.",
+    "featured": true
+  },
+  {
+    "q": "How many worlds does Grand Theft Timeline have?",
+    "a": "The store claims 200+ worlds of history and fiction, 25+ theme packs, and 2,000+ NPCs. Those figures are the developer’s marketing claims on the store page. The page does not publish a named world index, and this site does not invent one. A few screenshots show a year and a short label in the HUD. That is on-screen text, not a complete list.",
+    "featured": false
+  },
+  {
+    "q": "What PC do I need for Grand Theft Timeline?",
+    "a": "Minimum on 12 November 2026: 64-bit Windows 10 or later, Intel Core i5-7400 at 3.3 GHz or AMD Ryzen 3 3300X, 8 GB RAM, NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 5500 XT, a broadband connection, and 10 GB of space. The recommended block only restates a 64-bit processor and operating system.",
+    "featured": false
+  },
+  {
+    "q": "Is this site official?",
+    "a": "No. grandthefttimeline.wiki is an unofficial English fan guide. It is not affiliated with REAL PLAYERS, Rockstar Games, Valve, or Steam. It does not sell the game or recover accounts. The support email grandemprise@gmail.com is the address printed on the Steam store page.",
+    "featured": false
+  }
+]
