@@ -1,13 +1,13 @@
 ---
 title: "Privacy — Grand Theft Timeline Guide"
-description: "Privacy for grandthefttimeline.wiki, the unofficial Grand Theft Timeline fan guide. Static pages, no accounts, no Google Analytics yet, and an Adsterra Native Banner for this domain only."
+description: "Privacy for grandthefttimeline.wiki, the unofficial Grand Theft Timeline fan guide. Static pages, no accounts, GA4 G-RMLGP8DPXZ on content pages, and an Adsterra Native Banner for this domain only."
 h1: "Privacy for the Grand Theft Timeline guide"
 section: "Privacy"
 order: 6
-verifiedAgainst: "Site policy for grandthefttimeline.wiki as published in this repository. analytics.gaId still empty; Adsterra Native Banner enabled with this domain's Get Code."
+verifiedAgainst: "Site policy for grandthefttimeline.wiki as published in this repository. GA4 G-RMLGP8DPXZ and Adsterra Native Banner enabled with this domain's Get Code."
 quickAnswer:
   - "grandthefttimeline.wiki is a static fan guide for Grand Theft Timeline. It has no accounts and does not ask for a Steam login."
-  - "Google Analytics does not load. analytics.gaId is an empty string."
+  - "GA4 G-RMLGP8DPXZ loads on content pages. analytics.gaId is set to that measurement id."
   - "The Adsterra Native Banner after Quick Answer is enabled for this domain only. Zone id e2512aef7c7b99618a4e8e97406165ff loads from https://bauval.org/21/e2512aef7c7b99618a4e8e97406165ff."
   - "The same note is in the footer of every page. Affiliation and trademarks are on the disclaimer."
 sources:
@@ -36,14 +36,14 @@ Pages you request are served as ordinary documents. This repository does not add
 
 ## Analytics
 
-`analytics.gaId` is an empty string. The base layout loads Google Analytics only when that string is non-empty, so no GA4 tag is emitted.
+GA4 `G-RMLGP8DPXZ` is set in `analytics.gaId`. The base layout loads that tag on content pages.
 
 ## Advertising
 
 The Native Banner slot after the quick answer is **on** for grandthefttimeline.wiki. Zone id `e2512aef7c7b99618a4e8e97406165ff` loads from `https://bauval.org/21/e2512aef7c7b99618a4e8e97406165ff` on the homepage and guide pages. No advertising script from another game is included. Adult and sensitive categories stay off. The 404 page does not render a slot.
 
 <Callout kind="note" title="No key from another site">
-This repository does not carry a measurement id or an ad zone from any other game site. A future key for grandthefttimeline.wiki would be added only in this domain’s own config.
+The measurement id and ad zone on this site were created for grandthefttimeline.wiki. This repository does not carry a measurement id or an ad zone from any other game site.
 </Callout>
 
 Steam and the site URL printed on the store page are ordinary outbound links. Their own sites set their own cookies once you leave this one. The support address grandemprise@gmail.com is the address on the Steam page. This wiki does not read that mailbox.
