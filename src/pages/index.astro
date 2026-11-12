@@ -1,0 +1,268 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  releaseNote: string;
+  platform: string;
+  platformNote: string;
+  players: string;
+  playersNote: string;
+  genre: string;
+  genreNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+const guidePages = pages.filter((page) =>
+  ['guide', 'worlds', 'progression', 'coop'].includes(page.id),
+);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  hero: '/images/official/steam/library-hero.jpg',
+  hero2x: '/images/official/steam/library-hero-2x.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+  beach: '/images/official/steam/ss-00.jpg',
+  egypt: '/images/official/steam/ss-01.jpg',
+  courtyard: '/images/official/steam/ss-02.jpg',
+  renaissance: '/images/official/steam/ss-05.jpg',
+  transit: '/images/official/steam/ss-06.jpg',
+  lab: '/images/official/steam/ss-07.jpg',
+};
+
+const doors = [
+  {
+    href: '/guide',
+    num: '01',
+    title: 'Guide',
+    text: 'The time-travel heist in the store’s own words: captures, bosses, the garage, and paradox. The game is still upcoming.',
+    image: art.capsule,
+    alt: 'Official Steam capsule for Grand Theft Timeline, blue title over two blocky figures in hard hats by a stone wall',
+  },
+  {
+    href: '/worlds',
+    num: '02',
+    title: 'Worlds',
+    text: 'The 200+ worlds claim, theme packs, and HUD labels visible in store screenshots. Not a world index.',
+    image: art.egypt,
+    alt: 'Steam screenshot of a candle-lit stone hall in Grand Theft Timeline, HUD text 1323 BC and Egypt',
+  },
+  {
+    href: '/progression',
+    num: '03',
+    title: 'Progression',
+    text: 'What the feature list says about the arena, garage space, upgrades, and getting further along the timeline.',
+    image: art.renaissance,
+    alt: 'Steam screenshot inside a paneled booth in Grand Theft Timeline, HUD text 1266 and The Renaissance',
+  },
+  {
+    href: '/coop',
+    num: '04',
+    title: 'Co-op',
+    text: 'Online co-op for 1–4+ players, the departure rule, and rides. Tips stay inside the store text.',
+    image: art.beach,
+    alt: 'Steam screenshot of blocky figures on a palm beach in Grand Theft Timeline, HUD year 651 BC',
+  },
+];
+
+const stills = [
+  {
+    src: art.beach,
+    alt: 'Steam screenshot of Grand Theft Timeline: blocky figures on a palm beach beside turquoise water, with a HUD year of 651 BC',
+    caption: 'Palm beach, HUD 651 BC',
+  },
+  {
+    src: art.egypt,
+    alt: 'Steam screenshot of Grand Theft Timeline: three blocky figures in a candle-lit stone hall lined with seated statues, HUD text 1323 BC and Egypt',
+    caption: 'Statue hall, HUD 1323 BC, Egypt',
+  },
+  {
+    src: art.courtyard,
+    alt: 'Steam screenshot of Grand Theft Timeline: a yellow blocky figure beside a tall pink figure with a circle on its mask, HUD text Squid Game and Game 1, 2021',
+    caption: 'Courtyard, HUD Squid Game',
+  },
+  {
+    src: art.renaissance,
+    alt: 'Steam screenshot of Grand Theft Timeline: a dark booth lined with colored panels and a green sign, HUD text 1266 and The Renaissance',
+    caption: 'Paneled booth, HUD 1266, The Renaissance',
+  },
+  {
+    src: art.transit,
+    alt: 'Steam screenshot of Grand Theft Timeline: a machine interior with round gauges and a window onto a columned building, HUD text 2088, The Future, and In Transit',
+    caption: 'Machine interior, HUD In Transit',
+  },
+  {
+    src: art.lab,
+    alt: 'Steam screenshot of Grand Theft Timeline: a blue-and-white checkered room and a blocky rider on a skeletal mount, HUD text Ingolstadt, 1818 and Frankenstein’s Lab',
+    caption: 'Checkered room, HUD Ingolstadt, 1818',
+  },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with REAL PLAYERS</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          srcset={`${art.hero} 1920w, ${art.hero2x} 3840w`}
+          sizes="(min-width: 1536px) 1536px, 100vw"
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · planned {meta.release}</p>
+          <h1>Grand Theft Timeline is planned for 19 November 2026.</h1>
+          <p class="lede">
+            English pages for the co-op time-travel heist on Steam: what a run is described as, what the store claims about worlds, and what it says you do between trips.
+            On 12 November 2026 the full game was still marked coming soon. A count the store never printed stays off the page.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/guide">Guide</a>
+            <a class="btn ghost" href="/worlds">Worlds</a>
+            <a class="btn ghost" href="/coop">Co-op</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero, capsules, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
+        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+      </p>
+
+      <section class="section">
+        <h2>Four pages</h2>
+        <p class="section-intro">
+          Open the heist overview, the worlds note, progression, or co-op tips. There is no codes page. The Steam page checked on 12 November 2026 does not describe a redeem-code system.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt={door.alt} width="600" height="338" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The store’s own frames</h2>
+        <p class="section-intro">
+          Six of the forty screenshots on the Steam page. Several show a year and a short label in the HUD. Those labels are text in the picture. They are not a published world list. The written claim of 200+ worlds is on <a href="/worlds">Worlds</a>.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt={still.alt} width="600" height="338" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.release}</strong><span>{meta.releaseNote}</span></div>
+        <div class="stat"><strong>{meta.platform}</strong><span>{meta.platformNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.genre}</strong><span>{meta.genreNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Grand Theft Timeline is a co-op time-travel heist from REAL PLAYERS, who also publish it, on Steam (AppID 4928450). The store date is 19 November 2026. On 12 November 2026 the appdetails payload still marked it coming soon, Windows only, and not free.',
+            'The short description is a 1–4+ player run with physics, guns, bosses, an arena, a home base, skins, and stocks. You capture people across worlds of history and fiction, haul them home, and collect paradox in the garage. The store also claims 25+ theme packs, 2,000+ NPCs, and Workshop mods.',
+            'Categories list Single-player, Multi-player, Co-op, Online Co-op, Steam Cloud, and Family Sharing. Genres are Action, Adventure, Casual, Indie, RPG, Simulation, and Early Access. The minimum install is 10 GB on 64-bit Windows 10 or later.',
+            'There is no redeem-code list on the pages checked. The store does not print a named world index, a weapon table, or an upgrade tree, so this guide does not invent them. Figures such as 200+ worlds are the store’s marketing claims.',
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A line from the Steam page is labeled with the day it was read. A missing stat stays missing. About, privacy, and the disclaimer sit in the footer.
+        </p>
+        <div class="card-grid">
+          {guidePages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img
+                  src={doors.find((door) => door.href === `/${page.id}`)?.image ?? art.header}
+                  alt={doors.find((door) => door.href === `/${page.id}`)?.alt ?? siteConfig.art.headerAlt}
+                  width="600"
+                  height="338"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The sources live at {siteConfig.databases.map((db, i) => (<><a href={db.href}>{db.label}</a>{i < siteConfig.databases.length - 1 ? ', ' : ''}</>))}. This site is the skim: the heist loop, the world claim, the between-trip upgrades, and the co-op lines those pages actually print.
+            </p>
+            <p>
+              The full game is scheduled to unlock on {meta.release}. If the client and this page disagree after that date, trust the client.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} is both the developer and the publisher. Platforms on the API: {meta.platforms}. Genres: Action, Adventure, Casual, Indie, RPG, Simulation, and Early Access. The website printed on the store page is https://www.tbjbu2.com/ and the support email is grandemprise@gmail.com.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+      </section>
+    </div>
+  </main>
+</BaseLayout>
