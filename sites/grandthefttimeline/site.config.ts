@@ -19,7 +19,7 @@ export const siteConfig = {
   homeDescription:
     'Unofficial English guide to Grand Theft Timeline (Steam AppID 4928450) by REAL PLAYERS. The store date is 19 November 2026 and the game was still coming soon on 12 November 2026. Not affiliated with REAL PLAYERS, Rockstar Games, or Valve.',
   analytics: {
-    gaId: '',
+    gaId: 'G-RMLGP8DPXZ',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',
