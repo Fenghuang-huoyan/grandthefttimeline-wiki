@@ -1,9 +1,9 @@
 # Ads — grandthefttimeline.wiki
 
-The Native Banner slot after Quick Answer is wired and **turned off**.
+The Native Banner slot after Quick Answer is wired and **turned on** for this domain only.
 
-`sites/grandthefttimeline/ads.config.ts` sets `enabled` to false. `afterQuickAnswer.id` is an empty string. `afterQuickAnswer.scriptSrc` and the site-wide `scriptSrc` are empty. `invokeBase` is empty. No key from another game is stored here. With those values the slot does not render.
+`sites/grandthefttimeline/ads.config.ts` sets `enabled` to true. `afterQuickAnswer.id` is `e2512aef7c7b99618a4e8e97406165ff`. `afterQuickAnswer.scriptSrc` and the site-wide `scriptSrc` are `https://bauval.org/21/e2512aef7c7b99618a4e8e97406165ff`. The container id is `container-e2512aef7c7b99618a4e8e97406165ff`. No key from another game is stored here.
 
-`analytics.gaId` in `sites/grandthefttimeline/site.config.ts` is an empty string. The base layout does not load Google Analytics.
+`analytics.gaId` in `sites/grandthefttimeline/site.config.ts` is still an empty string. The base layout does not load GA4 until a measurement id is added.
 
-Adult and sensitive categories stay off. The 404 page does not render a slot. A zone for this domain, when one exists, belongs only in this file.
+Adult and sensitive categories stay off. The 404 page does not render a slot.

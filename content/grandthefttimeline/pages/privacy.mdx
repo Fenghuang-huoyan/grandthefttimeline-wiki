@@ -1,14 +1,14 @@
 ---
 title: "Privacy — Grand Theft Timeline Guide"
-description: "Privacy for grandthefttimeline.wiki, the unofficial Grand Theft Timeline fan guide. Static pages, no accounts, no Google Analytics, and no advertising script."
+description: "Privacy for grandthefttimeline.wiki, the unofficial Grand Theft Timeline fan guide. Static pages, no accounts, no Google Analytics yet, and an Adsterra Native Banner for this domain only."
 h1: "Privacy for the Grand Theft Timeline guide"
 section: "Privacy"
 order: 6
-verifiedAgainst: "Site policy for grandthefttimeline.wiki as published in this repository. analytics.gaId is empty and ads are disabled."
+verifiedAgainst: "Site policy for grandthefttimeline.wiki as published in this repository. analytics.gaId still empty; Adsterra Native Banner enabled with this domain's Get Code."
 quickAnswer:
   - "grandthefttimeline.wiki is a static fan guide for Grand Theft Timeline. It has no accounts and does not ask for a Steam login."
   - "Google Analytics does not load. analytics.gaId is an empty string."
-  - "Advertising does not load. The Adsterra slot is disabled, and the zone id and script URL are empty."
+  - "The Adsterra Native Banner after Quick Answer is enabled for this domain only. Zone id e2512aef7c7b99618a4e8e97406165ff loads from https://bauval.org/21/e2512aef7c7b99618a4e8e97406165ff."
   - "The same note is in the footer of every page. Affiliation and trademarks are on the disclaimer."
 sources:
   - label: "Steam store — Grand Theft Timeline"
@@ -40,7 +40,7 @@ Pages you request are served as ordinary documents. This repository does not add
 
 ## Advertising
 
-The Native Banner slot after the quick answer is present in the layout and **turned off**. `enabled` is false. `afterQuickAnswer.id` is empty. `scriptSrc` is empty. `invokeBase` is empty. With those values the slot renders nothing, including on the homepage and the guide pages. The 404 page does not include the slot component.
+The Native Banner slot after the quick answer is **on** for grandthefttimeline.wiki. Zone id `e2512aef7c7b99618a4e8e97406165ff` loads from `https://bauval.org/21/e2512aef7c7b99618a4e8e97406165ff` on the homepage and guide pages. No advertising script from another game is included. Adult and sensitive categories stay off. The 404 page does not render a slot.
 
 <Callout kind="note" title="No key from another site">
 This repository does not carry a measurement id or an ad zone from any other game site. A future key for grandthefttimeline.wiki would be added only in this domain’s own config.
