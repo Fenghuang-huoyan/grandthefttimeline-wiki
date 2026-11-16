@@ -484,6 +484,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; letter-spacing: 0.01em
   padding: 0.45rem 0.5rem;
   border-bottom: 1px solid var(--line);
 }
+/* Links and code tokens are the long unbreakable runs in fact tables.
+   Anywhere-wrap lets the table shrink into the column so article.guide's
+   overflow:hidden does not crop the right edge on a 320px viewport. */
+.guide .prose :is(th, td) :is(a, code) {
+  overflow-wrap: anywhere;
+}
 .prose th { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .prose img {
   border-radius: 14px;
